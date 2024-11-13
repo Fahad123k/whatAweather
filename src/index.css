@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  
+
+ 
+  color: var(--text-color);
+  /* background-color: #4b4d46; */
+ 
+  /* --secondary: #efeffd; */
+  /* --tertiary: #7a7a75; */
+  --text-color: #4e545c;
+  --blue:#fcfcfc;
+
+
+
+  
+}
+
+
+
+body {
+  /* background-color: var(--secondary); */
+  /* background-color: var(--secondary); */
+  background-color: #fff;
+}
+
+
+
+.grid-container {
+  /* background-color: var(--blue);  */
+}
+
+.navbar {
+  /* background-color: var(--primary);  */
+}
+
+.temperature-card {
+/*   --blue:#dee4f5; */
+background-color: var(--blue); 
+
+  font-size: 13px;
+  box-shadow: 0 4px 10px rgba(150, 170, 180, 0.5); 
+}
+
+.info-box {
+  background-color: var(--blue); 
+  box-shadow: 0 4px 10px rgba(150, 170, 180, 0.5); 
+}
+
+.bottom-section {
+  /* background-color: var(--blue);  */
+  
+}
+
+/* .blue-color{
+  
+ 
+} */
+
+.weekly-container{
+
+  background-color: var(--blue); 
+}
+.seven-days{
+  font-size: 13px;
+  background-color: var(--blue); 
+}
+.seven-days .icon-temp {
+  padding-top: 0.4rem;
+}
+.seven-days-font
+{
+  font-size: 17px;
+}
+
+.detail-date{
+  font-size: 12px;
+}
+
+
+.box-shadow{
+  box-shadow: 0 4px 10px rgba(150, 170, 180, 0.5),
+  0 3px 10px rgba(183, 200, 209, -0.5)
+}
+
+
+
+/* weather map */
+
+.weather-map-container {
+  height: 260px;
+  /* height: auto; */
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+}
+
+.bottom-content{
+  border-top: var(--text-color) 2px solid;
+  margin-top: 14px;
+  /* border-bottom: #4e545c 1px solid; */
+}
