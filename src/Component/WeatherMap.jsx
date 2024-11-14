@@ -8,8 +8,8 @@ const WeatherMap = () => {
   const [loading, setLoading] = useState(true);  // Added loading state
   const [error, setError] = useState(null);      // Added error state
 
-  // Replace with your OpenWeatherMap API key
-  // const apiKey = "7ec42df059dcecf0107b366e46bc31a9";
+
+ 
   const apiKey = import.meta.env.VITE_WEATHER_API;
   const city = "New Delhi";
   
