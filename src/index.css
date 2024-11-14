@@ -40,6 +40,7 @@ body {
 
 .navbar {
   /* background-color: var(--primary);  */
+  
 }
 
 .temperature-card {
@@ -48,6 +49,9 @@ background-color: var(--blue);
 
   font-size: 13px;
   box-shadow: 0 4px 10px rgba(150, 170, 180, 0.5); 
+}
+.temp-content{
+/* height: 300px; */
 }
 
 .info-box {
@@ -65,13 +69,23 @@ background-color: var(--blue);
  
 } */
 
+
+/* bottom section css */
+
 .weekly-container{
 
-  background-color: var(--blue); 
+  /* background-color: var(--blue);  */
+  /* background-color: re; */
 }
 .seven-days{
   font-size: 13px;
   background-color: var(--blue); 
+  /* background-color: red; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  padding: 0px 15px 5px;
 }
 .seven-days .icon-temp {
   padding-top: 0.4rem;

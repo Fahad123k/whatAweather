@@ -14,7 +14,7 @@ const WeeklyContainer = () => {
     };
 
     return (
-        <div className="weekly-container flex  flex-col justify-around  box-shadow m-1 h-full min-h-[30px]  rounded-lg  sm:col-span-3    ">
+        <div className=" weekly-container flex  flex-col justify-around  box-shadow m-1 h-full min-h-[30px]  rounded-lg  sm:col-span-3    ">
             <div className="header flex justify-between p-3 flex-row "><p className='font-semibold'>7 Days Forecast</p> <p>
 
                 <select
