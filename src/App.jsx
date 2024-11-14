@@ -133,8 +133,8 @@ const WeeklyContainer = () => {
   };
 
   return (
-    <div className="weekly-container flex  flex-col justify-around  box-shadow m-1 h-full min-h-[30px] rounded  rounded-lg  sm:col-span-3    ">
-      <div className="header flex justify-between p-3 flex-row "><p className='font-semibold'>7 Days Forcast</p> <p>
+    <div className="weekly-container flex  flex-col justify-around  box-shadow m-1 h-full min-h-[30px]  rounded-lg  sm:col-span-3    ">
+      <div className="header flex justify-between p-3 flex-row "><p className='font-semibold'>7 Days Forecast</p> <p>
 
         <select
           value={selectedOption}
@@ -201,7 +201,7 @@ const BottomSection = () => {
           <WeeklyContainer />
         </div>
 
-        <div className="blue-color   box-shadow h-full min-h-[30px] m-1 rounded-lg   rounded-lg sm:col-span-11  md:col-span-8 p-1"><WeatherMap /></div>
+        <div className="blue-color   box-shadow h-full min-h-[30px] m-1  rounded-lg sm:col-span-11  md:col-span-8 p-1"><WeatherMap /></div>
       </div>
     </div>
   );
@@ -217,7 +217,17 @@ function App() {
 
       <Navbar />
 
-      <div className="content-container rounded p-2  sm:col-span-12 md:col-span-11">
+      <div className="content-container rounded p-2  sm:col-span-12 md:col-span-12 lg:col-span-11">
+
+        <div className="w-full h-20 bg-red-200 rounded-lg shadow items-center  flex  box-shadow lg:hidden">
+          <ul className=' flex flex-row w-full justify-around items-center space-x-4'>
+            <li>Home</li>
+            <li>Map</li>
+            <li>Location</li>
+            <li>Calender</li>
+            <li>Profile</li>
+          </ul>
+        </div>
         <div className="flex h-full flex-col gap-2">
           <div className="temperature-section flex-1 ">
             <div className="temperature-display m-1 grid h-full grid-rows-1 gap-2 md:grid-cols-11  sm:grid-cols-11">

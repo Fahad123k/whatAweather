@@ -6,7 +6,7 @@ import { IoLocationOutline, IoEarth, IoSettings, IoNotificationsOutline } from "
 const Sidenav = () => {
     return (
 
-        <div className="m-3 navbar blue-color box-shadow rounded-lg hidden p-3  flex flex-col justify-between items-center sm:col-span-1 md:block ">
+        <div className="m-3 navbar blue-color box-shadow rounded-lg p-3  flex-col justify-between items-center sm:col-span-1 hidden lg:block">
         {/* <div className="  min-h-screen"> */}
             
             {/* Top Icon Section */}
