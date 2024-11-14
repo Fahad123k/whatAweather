@@ -19,7 +19,7 @@ const TemperatureCard = () => {
           size={35}
         />
       </div>
-      <div className="flex flex-col   ml-2  h-full justify-around gap-8 ">
+      <div className="flex flex-col   ml-2  h-full justify-around xxl:gap-8 ">
         <div className="cloud">
           <img className="h-20" src={weather} />
         </div>
