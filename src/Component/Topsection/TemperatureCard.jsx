@@ -30,7 +30,7 @@ const TemperatureCard = () => {
       <div className="temp-content flex flex-col mt-1 ml-2   justify-around  ">
         <div className="cloud pb-2 flex flex-row items-center justify-between p-2 ">
           <img className="h-20 " src={weather} />
-          <div className="font-semibold " style={{ fontSize: "38px" }}>
+          <div className="font-semibold text-4xl " >
           <h1>
             28<span>&#176;</span>C
           </h1>
@@ -45,7 +45,7 @@ const TemperatureCard = () => {
           <span className="mr-3 ">
             <IoIosRainy size={40} />
           </span>{" "}
-          Rainy Storm Clouds
+         <p className="text-sm"> Rainy Storm Clouds</p>
         </div> 
       </div>
       <div className="h-[0.1rem]  bg-gray-600 w-ful m-2"></div>
@@ -70,14 +70,14 @@ const TemperatureCard = () => {
         </div>
       </div>
       <div className="detail-date h-full flex justify-between  flex-row items-end p-2">
-        <div className=" items-center ">
+        <div className=" items-center   w-full">
           <div className="flex items-center ">
             {" "}
-            <FaCalendarAlt className="fill-current" size={20} />{" "}
-            <span className="ml-2">
-              <span className="time font-bold">Monday</span> 24 July 2025{" "}
-              <span className="time font-bold"> 05:05 PM </span>
-            </span>
+            <FaCalendarAlt className="fill-current" size={20} />
+            <div className="ml-2 flex w-full justify-between items-center ">
+              <div className="time  flex font-bold">Monday ,<span>{" "}24 July 2025</span></div> 
+              <div className="time font-bold text-xl"> 05:05 PM </div>
+            </div>
           </div>
         </div>
       </div>
