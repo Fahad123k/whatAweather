@@ -12,7 +12,7 @@ import TopContainer from './Component/Topsection/TopContainer';
 function App() {
  
   return (
-    <div className="grid-container grid grid-cols-1 gap-4 sm:grid-cols-12 md:grid-cols-12  min-h-screen ">
+    <div className="grid-container grid grid-cols-1 gap-2 sm:grid-cols-12 md:grid-cols-12  min-h-screen ">
       <Sidenav />
       <div className="content-container rounded p-2  sm:col-span-12 md:col-span-12 lg:col-span-11">
 
