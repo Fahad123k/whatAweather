@@ -10,27 +10,28 @@ You can check out the live demo of the application here:
 ## Screenshots
 
 ### Sample 1: Landing Page
-![Sample 1](screenshot/sample1.jpeg)
+![Sample 1](screenshot/sample1.png)
 
 ### Sample 2: Search Functionality
-![Sample 2](screenshot/sample2.jpeg)
+![Sample 2](screenshot/sample2.png)
 
 ### Sample 3: Weather Results
-![Sample 3](screenshot/sample3.jpeg)
+![Sample 3](screenshot/sample3.png)
 
 ### Sample 4: Responsive Mobile View
-![Sample 4](screenshot/sample4.jpeg)
+![Sample 4](screenshot/sample4.png)
 
 ### Sample 5: City Not Found
-![Sample 5](screenshot/sample5.jpeg)
+![Sample 5](screenshot/sample5.png)
 
 ### Sample 6: Redux State Management Example
-![Sample 6](screenshot/sample6.jpeg)
+![Sample 6](screenshot/sample6.png)
 
 ## Features
 
 - **Current Weather**: Shows the current weather of the searched city.
 - **Weather Details**: Displays additional weather information such as humidity, wind speed, and more.
+- **OpenStreetMap Integration**: Uses OpenStreetMap to provide location-based weather data and an interactive map interface.
 - **Search Functionality**: Custom search dropdown for easy city search.
 - **Fully Responsive**: Designed to work seamlessly across different screen sizes.
 - **Redux**: Utilizes Redux for state management to handle weather data.
@@ -41,8 +42,9 @@ You can check out the live demo of the application here:
 - **Frontend**: React, Redux
 - **Backend**: Node.js, Express
 - **Database**: MongoDB (if applicable)
-- **Weather API**: OpenWeatherMap API (or any other weather API of your choice)
-- **Styling**: CSS3, Tailwindcss, or Styled-components
+- **Weather API**: OpenWeatherMap API
+- **Mapping API**: OpenStreetMap (via Leaflet.js)
+- **Styling**: CSS3, tailwind, or Styled-components
 - **Deployment**: Vercel (for hosting)
 
 ## Installation
