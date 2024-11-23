@@ -30,8 +30,8 @@ const Navbar = () => {
 
       {/* Menu Items */}
       {isMenuOpen && (
-        <div className="absolute top-20 right-4 bg-white rounded-lg drop-shadow-lg py-4 px-6 z-50 border-t-2">
-          <ul className="flex flex-col space-y-4">
+        <div className="absolute top-20 right-4 bg-white rounded-lg drop-shadow-lg py-4 px-6 z-50 border-t-2  ">
+          <ul className="flex flex-col space-y-4 hover:*:text-blue-500  *:border-b-2 *:p-2">
             <li className="flex items-center space-x-2">
               <FaHome size={20} />
               <span>Home</span>
