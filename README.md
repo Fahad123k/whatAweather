@@ -10,22 +10,22 @@ You can check out the live demo of the application here:
 ## Screenshots
 
 ### Sample 1: Landing Page
-![Sample 1](screenshot/sample1.png)
+![Sample 1](screenshot/sample1.jpeg)
 
 ### Sample 2: Search Functionality
-![Sample 2](screenshot/sample2.png)
+![Sample 2](screenshot/sample2.jpeg)
 
 ### Sample 3: Weather Results
-![Sample 3](screenshot/sample3.png)
+![Sample 3](screenshot/sample3.jpeg)
 
 ### Sample 4: Responsive Mobile View
-![Sample 4](screenshot/sample4.png)
+![Sample 4](screenshot/sample4.jpeg)
 
 ### Sample 5: City Not Found
-![Sample 5](screenshot/sample5.png)
+![Sample 5](screenshot/sample5.jpeg)
 
 ### Sample 6: Redux State Management Example
-![Sample 6](screenshot/sample6.png)
+![Sample 6](screenshot/sample6.jpeg)
 
 ## Features
 
