@@ -44,7 +44,7 @@ const SearchCity = () => {
     };
 
     return (
-        <div className="search relative z-10">
+        <div className="search relative z-40">
             {/* Dropdown trigger */}
             <div className="flex items-center bg-gray-50 border-2 border-blue-100 rounded-xl mt-2 mr-2 cursor-pointer">
                 <input

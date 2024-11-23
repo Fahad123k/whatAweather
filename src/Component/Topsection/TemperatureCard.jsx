@@ -54,7 +54,7 @@ const TemperatureCard = () => {
                 onChange={handleChange}
                 className="p-2 rounded-lg border border-gray-300 shadow-sm outline-none bg-transparent text-sm"
               >
-                <option className='bg-transparent p-2 rounded-lg' value="7 days">Celcuis</option>
+                <option className='bg-transparent p-2 rounded-lg' value="7 days">Celsuis</option>
                 <option className='bg-transparent p-2 rounded-lg' value="30 days">Fahrenheit</option>
               </select>
             </div>
