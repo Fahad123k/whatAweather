@@ -7,13 +7,11 @@ const Navbar = () => {
   return (
     <div className="w-full h-20 bg-red-200 rounded-lg shadow items-center flex box-shadow lg:hidden">
       
-      {/* App Name and Logo */}
       <div className="flex items-center justify-start ml-4">
         <img src={weather} alt="Weather Logo" className="w-10 h-10 mr-2" />
         {/* <h1 className="text-[5px] font-semibold text-gray-700">WhatAWaether</h1> */}
       </div>
 
-      {/* Navbar Links with Icons */}
       <ul className="flex flex-row w-full justify-around items-center space-x-4">
         <li className="flex items-center space-x-1">
           <FaHome size={20} />
