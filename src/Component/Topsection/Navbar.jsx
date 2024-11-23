@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { FaHome, FaMapMarkerAlt, FaCalendarAlt, FaUserCircle } from 'react-icons/fa';
 import { IoLocationOutline } from 'react-icons/io5';
-import { GiHamburgerMenu } from 'react-icons/gi'; // Hamburger menu icon
+import { GiHamburgerMenu } from 'react-icons/gi'; 
+import { MdClose } from "react-icons/md";
 import weather from '../../assets/weather.png';
 
 const Navbar = () => {
@@ -25,7 +26,8 @@ const Navbar = () => {
         className="text-gray-700 text-2xl focus:outline-none"
         onClick={toggleMenu}
       >
-        <GiHamburgerMenu />
+          {isMenuOpen ? <MdClose/>:
+        <GiHamburgerMenu />}
       </button>
 
       {/* Menu Items */}
