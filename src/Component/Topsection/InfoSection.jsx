@@ -1,5 +1,7 @@
 import React from 'react'
 import Graph from './Graph';
+import SunriseSunsetGraph from './SunriseSunsetGraph';
+
 
 
 const WindStatus = ({ color }) => {
@@ -26,7 +28,7 @@ const WindStatus = ({ color }) => {
           <Graph />
         </div>
         <div className="bottom-content row-span-2 min-h-[30px]   flex items-center justify-center rounded outilne ">
-          <div className="flex flex-row justify-between   items-center w-full"><p><span className='text-[22px] font-semibold '>800</span> Omega</p> <p>5:01AM</p></div>
+          <div className="flex flex-row justify-between   items-center w-full"><p><span className='text-[22px] font-semibold '>Moderate</span> </p> <p>5:01AM</p></div>
   
         </div>
       </div>
@@ -37,10 +39,10 @@ const WindStatus = ({ color }) => {
       <div className={`info-box ${color} min-h-[40px] rounded-lg  grid grid-rows-7  p-3 `}>
         <div className="top-content row-span-5 min-h-[30px]   flex flex-col items-center justify-between rounded mt-2">
           <div className="flex items-center w-full font-semibold">Sunset  and Sunrise</div>
-          <Graph />
+          <SunriseSunsetGraph />
         </div>
         <div className="bottom-content row-span-2 min-h-[30px]   flex items-center justify-center  rounded ">
-          <div className="flex flex-row justify-between   items-center w-full"><p><span className='text-[22px] font-semibold '>5:30</span> AM</p> <p>5:01PM</p></div>
+          <div className="flex flex-row justify-between   items-center w-full"><p><span className='text-[22px] font-semibold '>6:51</span></p> <p className='text-[22px] font-semibold '>17:25</p></div>
   
         </div>
       </div>

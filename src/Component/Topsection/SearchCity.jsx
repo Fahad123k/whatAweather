@@ -11,13 +11,13 @@ const SearchCity = () => {
         ? cities.filter((city) =>
             city.toLowerCase().includes(searchTerm.toLowerCase())
         )
-        : cities; // Show all cities if no search term
+        : cities; 
 
     const toggleDropdown = () => setIsDropdownOpen((prev) => !prev);
 
     const handleCitySelect = (city) => {
-        setSearchTerm(city); // Show selected city in input
-        setIsDropdownOpen(false); // Close dropdown
+        setSearchTerm(city);
+        setIsDropdownOpen(false); 
     };
 
     return (
