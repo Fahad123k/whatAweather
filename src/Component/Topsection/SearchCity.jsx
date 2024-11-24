@@ -1,32 +1,28 @@
 import React, { useState, useMemo } from 'react';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
-
+import { City } from 'country-state-city';
 const SearchCity = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
 
-    const cities = [
-        "Agra", "Ahmedabad", "Ajmer", "Aligarh", "Allahabad", "Amritsar", "Aurangabad", 
-        "Bangalore", "Bareilly", "Bhopal", "Bhubaneswar", "Bikaner", "Chandigarh", 
-        "Chennai", "Coimbatore", "Cuttack", "Dehradun", "Delhi", "Dhanbad", 
-        "Durgapur", "Faridabad", "Firozabad", "Ghaziabad", "Gorakhpur", "Gurgaon", 
-        "Guwahati", "Gwalior", "Hubli", "Hyderabad", "Imphal", "Indore", "Jabalpur", 
-        "Jaipur", "Jalandhar", "Jammu", "Jamshedpur", "Jhansi", "Jodhpur", "Kanpur", 
-        "Karnal", "Kochi", "Kolhapur", "Kolkata", "Kota", "Kozhikode", "Lucknow", 
-        "Ludhiana", "Madurai", "Mangalore", "Meerut", "Moradabad", "Mumbai", "Mysore", 
-        "Nagpur", "Nashik", "Noida", "Patiala", "Patna", "Pondicherry", "Pune", 
-        "Raipur", "Rajkot", "Ranchi", "Rourkela", "Salem", "Siliguri", "Srinagar", 
-        "Surat", "Thane", "Thiruvananthapuram", "Thrissur", "Tiruchirappalli", 
-        "Tirunelveli", "Tirupati", "Tiruppur", "Udaipur", "Ujjain", "Vadodara", 
-        "Varanasi", "Vasai-Virar", "Vijayawada", "Visakhapatnam", "Warangal", 
-        "Yamunanagar"
-    ];
+    const indiaCountryCode = "IN";
+    const cities = City.getCitiesOfCountry(indiaCountryCode);
+    
+    // cities.forEach(element => {
+        
+    //     console.log(element)
+
+    // });
+    // cities.map((city,index)=>(
+    //     console.log(city.name,index)
+    // ))
+
 
     // memo to avoid recalculating filteredCities on every render
     const filteredCities = useMemo(() => {
         return searchTerm
             ? cities.filter((city) =>
-                city.toLowerCase().includes(searchTerm.toLowerCase())
+                city.name.toLowerCase().includes(searchTerm.toLowerCase())
             )
             : cities;
     }, [searchTerm]);
@@ -76,13 +72,13 @@ const SearchCity = () => {
             {isDropdownOpen && (
                 <div className="absolute bg-white shadow-lg rounded mt-1 overflow-y-scroll max-h-36 w-full">
                     {filteredCities.length > 0 ? (
-                        filteredCities.map((city, index) => (
+                        filteredCities.map((city,index) => (
                             <div
                                 key={index}
                                 className="p-2 text-sm font-semibold border-b last:border-b-0 cursor-pointer hover:bg-blue-100"
-                                onClick={() => handleCitySelect(city)}
+                                onClick={() => handleCitySelect(city.name)}
                             >
-                                {city}
+                                {city.name}
                             </div>
                         ))
                     ) : (
