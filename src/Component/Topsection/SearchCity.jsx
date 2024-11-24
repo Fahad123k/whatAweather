@@ -1,12 +1,17 @@
 import React, { useState, useMemo } from 'react';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
+
 import { City } from 'country-state-city';
+import { useDispatch } from 'react-redux';
+import { setCityInfo } from '../../features/weather/weatherSlice'
 const SearchCity = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
 
     const indiaCountryCode = "IN";
     const cities = City.getCitiesOfCountry(indiaCountryCode);
+
+    const dispatch = useDispatch()
     
     // cities.forEach(element => {
         
@@ -14,7 +19,7 @@ const SearchCity = () => {
 
     // });
     // cities.map((city,index)=>(
-    //     console.log(city.name,index)
+    //     console.log(city,index)
     // ))
 
 
@@ -29,8 +34,9 @@ const SearchCity = () => {
 
     const toggleDropdown = () => setIsDropdownOpen((prev) => !prev);
 
-    const handleCitySelect = (city) => {
-        setSearchTerm(city);
+    const handleCitySelect = (cityInfo) => {
+        setSearchTerm(cityInfo.name);
+        dispatch(setCityInfo(cityInfo))
         setIsDropdownOpen(false); 
     };
 
@@ -76,7 +82,7 @@ const SearchCity = () => {
                             <div
                                 key={index}
                                 className="p-2 text-sm font-semibold border-b last:border-b-0 cursor-pointer hover:bg-blue-100"
-                                onClick={() => handleCitySelect(city.name)}
+                                onClick={() => handleCitySelect(city)}
                             >
                                 {city.name}
                             </div>

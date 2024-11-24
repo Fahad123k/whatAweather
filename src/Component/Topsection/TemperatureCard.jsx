@@ -22,6 +22,7 @@ import { BiMinus, BiMinusBack, BiPlus } from "react-icons/bi";
 const TemperatureCard = () => {
 
   const tempval= useSelector((state)=>state.weather.value);
+  const cityInfo=useSelector((state)=>state.weather.cityInfo)
 
   const dispatch = useDispatch()
 
@@ -61,7 +62,7 @@ const TemperatureCard = () => {
           <div className="flex items-center justify-between ">
             <div className="city flex items-center"> {" "}
               <IoLocationOutline className="fill-current" size={20} />
-              <span className=" ml-2"> New Delhi ,India</span></div>
+              <span className=" ml-2"> {cityInfo.name} ,{cityInfo.countryCode}</span></div>
             <div className="flex">
               <select
                 value={selectedOption}
