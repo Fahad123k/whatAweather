@@ -11,7 +11,21 @@ import { IoIosRainy } from "react-icons/io";
 import { FaCalendarAlt } from "react-icons/fa";
 import SearchCity from "./SearchCity";
 
+
+
+// use selector
+import { useDispatch, useSelector } from 'react-redux'
+import { decrement, increment } from '../../features/weather/weatherSlice'
+import { PiUsbBold } from "react-icons/pi";
+import { BiMinus, BiMinusBack, BiPlus } from "react-icons/bi";
+
 const TemperatureCard = () => {
+
+  const tempval= useSelector((state)=>state.weather.value);
+
+  const dispatch = useDispatch()
+
+  console.log(tempval)
   const [selectedOption, setSelectedOption] = useState("Celcuis");
 
   const handleChange = (event) => {
@@ -25,7 +39,7 @@ const TemperatureCard = () => {
           <img className="h-20 " src={weather} />
           <div className="font-semibold text-4xl " >
             <h1>
-              28<span>&#176;</span>C
+              {tempval}<span>&#176;</span>C
             </h1>
           </div>
         </div>
@@ -58,6 +72,21 @@ const TemperatureCard = () => {
                 <option className='bg-transparent p-2 rounded-lg' value="30 days">Fahrenheit</option>
               </select>
             </div>
+            <div>
+        <button
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+         <BiPlus/>
+        </button>
+        <span>{tempval}</span>
+        <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          <BiMinus/>
+        </button>
+      </div>
 
           </div>
         </div>
