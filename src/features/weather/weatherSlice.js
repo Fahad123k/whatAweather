@@ -19,17 +19,14 @@ export const weatherSlice=createSlice({
     name:"weather",
     initialState,
     reducers:{
-        setCityInfo: (state,action)=>{
-            state.cityInfo=action.payload
-            // const weatherData= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${state.cityInfo.latitude}&lon=${state.cityInfo.longitude}&appid=${apiKey}`);
-            // console.log(weatherData)
-        },
+       
         weatherInfo:(state,actions)=>{
             state.weatherInfo=actions.payload
         }
     }
 })
 
+// console.log("from store",initialState.weatherInfo)
 
 export const {weatherInfo} =weatherSlice.actions;
 

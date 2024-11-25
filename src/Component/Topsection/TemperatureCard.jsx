@@ -40,7 +40,7 @@ const TemperatureCard = () => {
           <img className="h-20 " src={weather} />
           <div className="font-semibold text-4xl " >
             <h1>
-             28<span>&#176;</span>C
+            28<span>&#176;</span>C
             </h1>
           </div>
         </div>
@@ -62,7 +62,7 @@ const TemperatureCard = () => {
           <div className="flex items-center justify-between ">
             <div className="city flex items-center"> {" "}
               <IoLocationOutline className="fill-current" size={20} />
-              <span className=" ml-2"> {cityInfo.name??"test"} ,{cityInfo.countryCode??"test"}</span></div>
+              <span className=" ml-2"> {weatherInfo.name??"test city"} ,{weatherInfo.sys.country??"test country" }</span></div>
             <div className="flex">
               <select
                 value={selectedOption}
