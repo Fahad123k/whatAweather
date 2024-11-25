@@ -15,18 +15,18 @@ import SearchCity from "./SearchCity";
 
 // use selector
 import { useDispatch, useSelector } from 'react-redux'
-import { decrement, increment } from '../../features/weather/weatherSlice'
-import { PiUsbBold } from "react-icons/pi";
-import { BiMinus, BiMinusBack, BiPlus } from "react-icons/bi";
+// import { decrement, increment } from '../../features/weather/weatherSlice'
 
 const TemperatureCard = () => {
 
-  const tempval= useSelector((state)=>state.weather.value);
-  const cityInfo=useSelector((state)=>state.weather.cityInfo)
 
-  const dispatch = useDispatch()
+  const cityInfo=useSelector((state)=>state.weather.weatherInfo)
+  const weatherInfo=useSelector((state)=>state.weather.weatherInfo);
+  console.log("hello",weatherInfo)
 
-  console.log(tempval)
+  
+
+ 
   const [selectedOption, setSelectedOption] = useState("Celcuis");
 
   const handleChange = (event) => {
@@ -40,7 +40,7 @@ const TemperatureCard = () => {
           <img className="h-20 " src={weather} />
           <div className="font-semibold text-4xl " >
             <h1>
-              {tempval}<span>&#176;</span>C
+             28<span>&#176;</span>C
             </h1>
           </div>
         </div>
@@ -62,7 +62,7 @@ const TemperatureCard = () => {
           <div className="flex items-center justify-between ">
             <div className="city flex items-center"> {" "}
               <IoLocationOutline className="fill-current" size={20} />
-              <span className=" ml-2"> {cityInfo.name} ,{cityInfo.countryCode}</span></div>
+              <span className=" ml-2"> {cityInfo.name??"test"} ,{cityInfo.countryCode??"test"}</span></div>
             <div className="flex">
               <select
                 value={selectedOption}
@@ -74,19 +74,8 @@ const TemperatureCard = () => {
               </select>
             </div>
             <div>
-        <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-         <BiPlus/>
-        </button>
-        <span>{tempval}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          <BiMinus/>
-        </button>
+      
+   
       </div>
 
           </div>

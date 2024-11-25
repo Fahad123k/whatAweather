@@ -12,7 +12,9 @@ const Bottom = () => {
         <WeeklyContainer />
       </div>    
 
-      <div className="blue-color   box-shadow sm:h-full min-h-[300px] m-1  rounded-lg sm:col-span-11  md:col-span-8 p-1"><WeatherMap /></div>
+      <div className="blue-color   box-shadow sm:h-full min-h-[300px] m-1  rounded-lg sm:col-span-11  md:col-span-8 p-1">
+        {/* <WeatherMap /> */}
+        </div>
     </div>
   </div>
   )
