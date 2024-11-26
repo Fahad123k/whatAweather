@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 import axios from 'axios';
 import { City } from 'country-state-city';
@@ -43,6 +43,11 @@ const SearchCity = () => {
             setLoading(false);
         }
     };
+
+    useEffect(()=>{
+
+        fetchWeather("New Delhi");
+    },[])
 
     const filteredCities = useMemo(() => {
         return searchTerm
