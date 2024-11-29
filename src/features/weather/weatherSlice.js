@@ -12,7 +12,7 @@ const initialState = {
     countryCode:"IN"
   },
 
-  weatherInfo:{}
+  weatherInfo:null
 }
 
 export const weatherSlice=createSlice({

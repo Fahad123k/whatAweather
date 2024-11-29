@@ -44,10 +44,7 @@ const SearchCity = () => {
         }
     };
 
-    useEffect(()=>{
-
-        fetchWeather("New Delhi");
-    },[])
+  
 
     const filteredCities = useMemo(() => {
         return searchTerm
